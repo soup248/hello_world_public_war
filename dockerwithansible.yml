@@ -4,7 +4,7 @@
       
     - name: Log into docker
       docker_login:
-        registry: https://hub.docker.com/repository/docker/soup3009/workrepo/general
+        registry: https://hub.docker.com/repository/docker/soup3009/workrepo
         username: soup3009
         password: Trishank@248
         
