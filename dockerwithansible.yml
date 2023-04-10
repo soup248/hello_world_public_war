@@ -1,0 +1,27 @@
+---
+- hosts: websever
+  tasks:
+      
+    - name: Log into docker
+      docker_login:
+        registry: soup3009
+        username: soup3009
+        password: Trishank@248
+        
+    - name: pull an image
+      docker_image:
+        name: "soup3009/workrepo:10"
+        source: pull
+
+    #- name: remove container
+     #  docker_container:
+      #  name: devopsAppDeploy
+      #  state: absent
+        
+    - name: create a application container
+      docker_container:
+        name: devopsAppDeploy
+        image: "soup3009/workrepo:10"
+        state: started
+        ports:
+          - "8111:8080"
