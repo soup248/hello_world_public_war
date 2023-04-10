@@ -4,7 +4,7 @@
       
     - name: Log into docker
       docker_login:
-        registry: soup3009
+        registry: soup3009/workrepo
         username: soup3009
         password: Trishank@248
         
