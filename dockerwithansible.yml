@@ -13,10 +13,10 @@
         name: "soup3009/workrepo:10"
         source: pull
 
-    #- name: remove container
-     #  docker_container:
-      #  name: devopsAppDeploy
-      #  state: absent
+    - name: remove container
+      docker_container:
+        name: devopsAppDeploy
+        state: absent
         
     - name: create a application container
       docker_container:
